@@ -4,7 +4,7 @@ import HomeSection from "@/sections/HomeSection";
 
 export default function Home() {
   return (
-    <div className="p-[1rem] h-full w-full">
+    <div className="flex flex-col gap-[1rem] p-[1rem] h-full w-full">
       <HomeSection />
       <AboutSection />
     </div>

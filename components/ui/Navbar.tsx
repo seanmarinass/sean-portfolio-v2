@@ -23,6 +23,9 @@ export default function Navbar() {
           {NAVBAR_LINKS.map((link, index) => {
             const { path, label } = link;
             const isActive = activeSection === path;
+            console.log(
+              `Active: ${activeSection} Path: ${path} isActive: ${isActive}`
+            );
 
             return (
               <NavigationMenuItem key={index}>

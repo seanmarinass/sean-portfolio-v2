@@ -1,3 +1,5 @@
+"use client";
+
 import { NavbarPath } from "@/lib/constants/navbar.constants";
 import { create } from "zustand";
 
@@ -7,6 +9,6 @@ interface NavbarState {
 }
 
 export const useNavbarStore = create<NavbarState>((set) => ({
-  activeSection: `${NavbarPath.HOME}`,
+  activeSection: NavbarPath.HOME,
   setActiveSection: (section: string) => set({ activeSection: section }),
 }));
