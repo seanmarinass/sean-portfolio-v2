@@ -9,6 +9,6 @@ interface NavbarState {
 }
 
 export const useNavbarStore = create<NavbarState>((set) => ({
-  activeSection: NavbarPath.HOME,
+  activeSection: NavbarPath.ABOUT,
   setActiveSection: (section: string) => set({ activeSection: section }),
 }));

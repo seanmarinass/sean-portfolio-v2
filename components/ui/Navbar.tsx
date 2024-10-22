@@ -11,40 +11,42 @@ import {
 import Link from "next/link";
 import { useNavbarStore } from "@/stores/navbar.store";
 import clsx from "clsx";
+import { Button } from "./button";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const activeSection = useNavbarStore((state) => state.activeSection);
   const handleMenuItemClick = useNavbarStore((state) => state.setActiveSection);
 
   return (
-    <nav className="h-full p-[1rem]">
-      <NavigationMenu className="h-full" orientation="vertical">
-        <NavigationMenuList className="h-full flex flex-col h-full gap-[1rem]">
+    <nav>
+      <NavigationMenu orientation="vertical">
+        <NavigationMenuList className="flex flex-col gap-[0.5rem]">
           {NAVBAR_LINKS.map((link, index) => {
             const { path, label } = link;
             const isActive = activeSection === path;
-            console.log(
-              `Active: ${activeSection} Path: ${path} isActive: ${isActive}`
-            );
 
             return (
-              <NavigationMenuItem key={index}>
-                <Link
-                  href="/"
-                  onClick={() => {
-                    handleMenuItemClick(path);
-                  }}
-                >
-                  <NavigationMenuLink
-                    className={clsx(
-                      navigationMenuTriggerStyle(),
-                      "w-full font-semibold",
-                      { "bg-accent": isActive }
-                    )}
+              <NavigationMenuItem key={index} className="w-full">
+                <NavigationMenuLink>
+                  <motion.button
+                    className={clsx("text-base", {
+                      "text-lg p-[0.5rem] font-bold": isActive,
+                    })}
+                    onClick={() => {
+                      handleMenuItemClick(path);
+                    }}
+                    whileHover={{
+                      padding: "0.5rem",
+                      fontWeight: "bold",
+                      fontSize: "1.125rem",
+                      transition: { duration: 0.2 },
+                    }}
+                    initial={{ padding: "0rem", fontSize: "1rem" }}
                   >
                     {label}
-                  </NavigationMenuLink>
-                </Link>
+                  </motion.button>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             );
           })}

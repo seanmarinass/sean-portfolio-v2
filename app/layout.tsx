@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
+import IntroSection from "@/sections/IntroSection";
+import Link from "next/link";
+import { GITHUB_URL, LINKED_IN_URL } from "@/lib/social-media-links";
+import { Button } from "@/components/ui/button";
+import SocialMediaRow from "@/components/ui/SocialMediaRow";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +31,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`flex h-full antialiased`}>
-        <Navbar />
-        {children}
+      <body className="dark antialiased flex py-[6rem] px-[10rem] h-full justify-center w-full">
+        <div className="flex flex-col gap-[4rem] w-[50%] max-w-[40rem]">
+          <IntroSection />
+          <Navbar />
+
+          <div className="flex-grow" />
+          <SocialMediaRow />
+        </div>
+
+        <div className="w-[50%] max-w-[40rem]">{children}</div>
       </body>
     </html>
   );
