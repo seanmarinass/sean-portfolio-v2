@@ -1,8 +1,8 @@
 import { GITHUB_URL, LINKED_IN_URL } from "@/lib/social-media-links";
 import Link from "next/link";
 import { Button } from "./button";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@/icons/LinkedInIcon";
+import GithubIcon from "@/icons/GithubIcon";
 
 export default function SocialMediaRow() {
   return (
@@ -15,7 +15,7 @@ export default function SocialMediaRow() {
 
       <Link href={GITHUB_URL}>
         <Button>
-          <GitHubIcon />
+          <GithubIcon />
         </Button>
       </Link>
     </nav>

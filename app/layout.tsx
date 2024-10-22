@@ -1,22 +1,13 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import IntroSection from "@/sections/IntroSection";
-import Link from "next/link";
-import { GITHUB_URL, LINKED_IN_URL } from "@/lib/social-media-links";
-import { Button } from "@/components/ui/button";
 import SocialMediaRow from "@/components/ui/SocialMediaRow";
+import { Inter } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className="dark antialiased flex py-[6rem] px-[10rem] h-full justify-center w-full">
+      <body
+        className={`${inter} dark antialiased flex py-[6rem] px-[10rem] h-full justify-center w-full`}
+      >
         <div className="flex flex-col gap-[4rem] w-[50%] max-w-[40rem]">
           <IntroSection />
           <Navbar />
