@@ -47,7 +47,7 @@ export const EXPERIENCES: Experience[] = [
     startYear: "2024",
     endYear: "Present",
     description:
-      "Developed responsive web applications using React.js and LoopBack with MongoDB, leveraging TypeScript for efficient development. Improved data fetching performance by 200% and enhanced user experience through Figma-designed system functions, increasing satisfaction by 20%. Designed REST APIs with OpenAPI for seamless frontend-backend integration and utilized Azure DevOps for ticket management, pull requests, and build pipelines.",
+      "Worked on web applications using React.js, LoopBack, and MongoDB, focusing on data fetching optimization and user experience improvements. Designed REST APIs with OpenAPI and managed project workflows using Azure DevOps.",
     skills: [
       "MongoDb",
       "Express.js",
@@ -70,7 +70,7 @@ export const EXPERIENCES: Experience[] = [
     startYear: "2023",
     endYear: "2023",
     description:
-      "Contributed to the development of core Scala microservices, designing REST APIs with Swagger and integrating RabbitMQ for efficient message queue handling. Managed data operations using MongoDB and collaborated with product managers and designers to translate requirements into technical specifications. Ensured reliable solutions through comprehensive testing, achieving 100% test coverage and ensuring timely project deliveries.",
+      "Developed microservices in Scala and designed REST APIs, integrating RabbitMQ for message handling. Collaborated with cross-functional teams and ensured project quality through comprehensive testing.",
     skills: [
       "MongoDb",
       "Microservices",
@@ -88,7 +88,7 @@ export const EXPERIENCES: Experience[] = [
     startYear: "2022",
     endYear: "2022",
     description:
-      "Extensively leveraged Java Spring Boot to enhance backend development, streamlining processes and improving code maintainability. Gained hands-on experience crafting and invoking RESTful APIs, both internal and external. Developed proficiency in PostgreSQL database management and honed Object-Oriented Programming skills in Java and Kotlin. Applied expertise in build automation using Gradle.",
+      "Enhanced backend development using Java Spring Boot, working with RESTful APIs and PostgreSQL. Developed skills in build automation with Gradle and applied object-oriented programming concepts in Java and Kotlin.",
     skills: [
       "PostgreSql",
       "Microservices",

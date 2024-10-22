@@ -39,7 +39,7 @@ export default function ExperienceCard({
 
       <div>
         <CardHeader>
-          <CardTitle className="text-lg ">{position}</CardTitle>
+          <CardTitle className="text-lg">{position}</CardTitle>
           <CardDescription>{company}</CardDescription>
         </CardHeader>
 
@@ -49,7 +49,11 @@ export default function ExperienceCard({
 
         <CardFooter className="flex flex-wrap gap-[0.5rem]">
           {skills.map((skill, index) => (
-            <Badge key={index} variant="outline">
+            <Badge
+              key={index}
+              variant="default"
+              className="bg-sky-300/10 text-sky-300 hover:bg-sky-300/10 hover:text-sky-300"
+            >
               {skill}
             </Badge>
           ))}
