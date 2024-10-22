@@ -1,5 +1,5 @@
 import ExperienceCard from "@/components/ui/ExperienceCard";
-import { EXPERIENCES } from "@/lib/experiences.data";
+import { EXPERIENCES } from "@/lib/data/experiences.data";
 
 export default function ExperienceSection() {
   return (

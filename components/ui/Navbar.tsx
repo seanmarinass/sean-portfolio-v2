@@ -1,6 +1,6 @@
 "use client";
 
-import { NAVBAR_LINKS } from "@/lib/constants/navbar.constants";
+import { NAVBAR_LINKS } from "@/lib/data/navbar.data";
 import {
   NavigationMenu,
   NavigationMenuItem,

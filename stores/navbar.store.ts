@@ -1,6 +1,6 @@
 "use client";
 
-import { NavbarPath } from "@/lib/constants/navbar.constants";
+import { NavbarPath } from "@/lib/data/navbar.data";
 import { create } from "zustand";
 
 interface NavbarState {

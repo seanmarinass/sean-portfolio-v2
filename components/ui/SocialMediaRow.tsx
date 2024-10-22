@@ -1,4 +1,4 @@
-import { GITHUB_URL, LINKED_IN_URL } from "@/lib/social-media-links";
+import { GITHUB_URL, LINKED_IN_URL } from "@/lib/data/social-media-links.data";
 import Link from "next/link";
 import { Button } from "./button";
 import LinkedInIcon from "@/icons/LinkedInIcon";
