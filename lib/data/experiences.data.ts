@@ -1,34 +1,4 @@
-type Skill =
-  | "Typescript"
-  | "Java"
-  | "Scala"
-  | "Scala Test"
-  | "HTML"
-  | "CSS"
-  | "Python"
-  | "MongoDb"
-  | "PostgreSql"
-  | "React.js"
-  | "Vue.js"
-  | "Next.js"
-  | "Node.js"
-  | "Express.js"
-  | "Springboot"
-  | "Tailwind"
-  | "Agile"
-  | "React Native"
-  | "OpenAPI Specification"
-  | "Azure DevOps"
-  | "Jira"
-  | "RabbitMq"
-  | "RestAPI"
-  | "FastAPI"
-  | "Microfrontend"
-  | "Microservices"
-  | "Git"
-  | "Gradle"
-  | "Springboot Test"
-  | "Kotlin";
+import { Skill } from "../constants";
 
 interface Experience {
   position: string;

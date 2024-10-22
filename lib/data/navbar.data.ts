@@ -2,7 +2,6 @@ export enum NavbarPath {
   ABOUT = "#about",
   EXPERIENCE = "#experience",
   PROJECTS = "#projects",
-  SKILLS = "skills",
 }
 
 export interface NavbarLink {
@@ -22,9 +21,5 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     label: "Projects",
     path: NavbarPath.PROJECTS,
-  },
-  {
-    label: "Skills",
-    path: NavbarPath.SKILLS,
   },
 ];
