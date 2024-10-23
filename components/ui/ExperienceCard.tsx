@@ -28,7 +28,7 @@ export default function ExperienceCard({
   link,
 }: ExperienceCardProps) {
   return (
-    <Card className="flex w-full">
+    <Card className="flex w-full border-none hover:bg-primary-foreground/40">
       <div>
         <CardHeader>
           <CardDescription className="text-nowrap text-lg">
