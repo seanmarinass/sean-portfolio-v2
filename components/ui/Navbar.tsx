@@ -6,13 +6,10 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "./navigation-menu";
-import Link from "next/link";
 import { useNavbarStore } from "@/stores/navbar.store";
 import clsx from "clsx";
 import { Button } from "./button";
-import { motion } from "framer-motion";
 
 export default function Navbar() {
   const activeSection = useNavbarStore((state) => state.activeSection);
@@ -29,23 +26,18 @@ export default function Navbar() {
             return (
               <NavigationMenuItem key={index} className="w-full">
                 <NavigationMenuLink>
-                  <motion.button
-                    className={clsx("text-base", {
-                      "text-lg p-[0.5rem] font-bold": isActive,
-                    })}
-                    onClick={() => {
-                      handleMenuItemClick(path);
-                    }}
-                    whileHover={{
-                      padding: "0.5rem",
-                      fontWeight: "bold",
-                      fontSize: "1.125rem",
-                      transition: { duration: 0.2 },
-                    }}
-                    initial={{ padding: "0rem", fontSize: "1rem" }}
+                  <Button
+                    variant="ghost"
+                    className={clsx(
+                      "text-base transition-all duration-200 ease-in-out transform hover:bg-none",
+                      isActive
+                        ? "ml-[2rem] font-bold bg-accent"
+                        : "scale-100 ml-0"
+                    )}
+                    onClick={() => handleMenuItemClick(path)}
                   >
                     {label}
-                  </motion.button>
+                  </Button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             );

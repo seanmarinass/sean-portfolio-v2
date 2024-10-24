@@ -1,9 +1,5 @@
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import SocialMediaRow from "@/components/ui/SocialMediaRow";
 
 export default function IntroCard() {
   return (
@@ -16,6 +12,8 @@ export default function IntroCard() {
         I build scalable Fullstack applications using the MERN stack with
         Typescript
       </CardDescription>
+      <div className="mt-[0.5rem]"/>
+      <SocialMediaRow />
     </Card>
   );
 }

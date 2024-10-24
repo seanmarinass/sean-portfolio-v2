@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
-import SocialMediaRow from "@/components/ui/SocialMediaRow";
 import { Inter } from "next/font/google";
 import IntroCard from "@/sections/IntroCard";
 
@@ -25,13 +24,12 @@ export default function RootLayout({
       <body
         className={`${inter} dark antialiased flex py-[6rem] px-[10rem] h-full justify-center w-full`}
       >
-        <div className=" w-[50%] max-w-[40rem] relative">
+        <div className="flex flex-col w-[50%] max-w-[40rem] h-full relative">
           <div className="flex flex-col gap-[4rem] fixed">
             <IntroCard />
             <Navbar />
 
             <div className="flex-grow" />
-            <SocialMediaRow />
           </div>
         </div>
 
