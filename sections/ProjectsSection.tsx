@@ -1,11 +1,11 @@
-import { CardTitle } from "@/components/ui/card";
 import ProjectCard from "@/components/ui/ProjectCard";
+import SectionTitle from "@/components/ui/SectionTitle";
 import { PROJECTS } from "@/lib/data/projects.data";
 
 export default function ProjectsSection() {
   return (
     <section className="flex flex-col gap-[2rem]">
-      <CardTitle className="text-2xl">Featured Projects</CardTitle>
+      <SectionTitle title="Projects" />
 
       {PROJECTS.map((project, index) => (
         <ProjectCard
