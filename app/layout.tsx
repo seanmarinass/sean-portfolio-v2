@@ -25,12 +25,14 @@ export default function RootLayout({
       <body
         className={`${inter} dark antialiased flex py-[6rem] px-[10rem] h-full justify-center w-full`}
       >
-        <div className="flex flex-col gap-[4rem] w-[50%] max-w-[40rem]">
-          <IntroCard />
-          <Navbar />
+        <div className=" w-[50%] max-w-[40rem] relative">
+          <div className="flex flex-col gap-[4rem] fixed">
+            <IntroCard />
+            <Navbar />
 
-          <div className="flex-grow" />
-          <SocialMediaRow />
+            <div className="flex-grow" />
+            <SocialMediaRow />
+          </div>
         </div>
 
         <div className="w-[50%] max-w-[40rem]">{children}</div>
