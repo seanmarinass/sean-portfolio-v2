@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "./badge";
 import {
   Card,
@@ -26,18 +27,16 @@ export default function ProjectCard({
   skills,
 }: ProjectCardProps) {
   return (
-    <Card className="flex w-full">
-      {/* <div>
-        <CardHeader>
-          <CardDescription className="text-nowrap text-lg">
-            {startYear} - {endYear}
-          </CardDescription>
-        </CardHeader>
-      </div> */}
+    <Card className="flex w-full bg-primary/5 border-none hover:scale-105 group">
+      <div className="flex w-[40%] justify-center items-center align-middle p-[0.5rem]">
+        <Image src={image} alt={title} height={500} width={500} />
+      </div>
 
-      <div>
+      <div className="w-[60%]">
         <CardHeader>
-          <CardTitle className="text-lg">{title}</CardTitle>
+          <CardTitle className="text-lg group-hover:text-sky-300">
+            {title}
+          </CardTitle>
           <CardDescription>{year}</CardDescription>
         </CardHeader>
 

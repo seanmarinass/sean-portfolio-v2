@@ -1,5 +1,10 @@
 import { Skill } from "../constants";
 
+import seanPortfolioV2Image from "@/public/sean-portfolio-v2.png";
+import seanPortfolioV1Image from "@/public/sean-portfolio-v1.png";
+import ninavanImage from "@/public/ninjaVan.png";
+import apperizerImage from "@/public/appetizer.png";
+
 interface Project {
   title: string;
   year: string;
@@ -34,7 +39,7 @@ export const PROJECTS: Project[] = [
     description:
       "Updated web portfolio featuring the latest information and projects as of 2024.",
     link: "",
-    image: "",
+    image: seanPortfolioV2Image.src,
     skills: ["Next.js", "Typescript", "Framer", "Tailwind"],
   },
   {
@@ -43,7 +48,7 @@ export const PROJECTS: Project[] = [
     description:
       "First version of the web portfolio featuring updated information and projects as of 2023.",
     link: "",
-    image: "",
+    image: seanPortfolioV1Image.src,
     skills: ["Next.js", "Typescript", "Framer", "Tailwind"],
   },
   {
@@ -52,7 +57,7 @@ export const PROJECTS: Project[] = [
     description:
       "A web application that provides users with real-time visualization of delivery drivers' locations, offering precise timing instead of a broad delivery range.",
     link: "",
-    image: "",
+    image: ninavanImage.src,
     skills: [
       "Java",
       "Maven",
@@ -71,7 +76,7 @@ export const PROJECTS: Project[] = [
     description:
       "A web application that scrapes Twitter for trending words and phrases, visualizing their sentiment. This tool helps aspiring entrepreneurs identify potential startup ideas based on current trends.",
     link: "",
-    image: "",
+    image: apperizerImage.src,
     skills: [
       "Java",
       "Maven",
