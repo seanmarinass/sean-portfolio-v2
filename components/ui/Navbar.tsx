@@ -10,6 +10,7 @@ import {
 import { useNavbarStore } from "@/stores/navbar.store";
 import clsx from "clsx";
 import { Button } from "./button";
+import { CardDescription } from "./card";
 
 export default function Navbar() {
   const activeSection = useNavbarStore((state) => state.activeSection);
@@ -28,15 +29,20 @@ export default function Navbar() {
                 <NavigationMenuLink>
                   <Button
                     variant="ghost"
-                    className={clsx(
-                      "text-base transition-all duration-200 ease-in-out transform hover:bg-none",
-                      isActive
-                        ? "ml-[2rem] font-bold bg-accent"
-                        : "scale-100 ml-0"
-                    )}
                     onClick={() => handleMenuItemClick(path)}
+                    className={clsx(
+                      `group-[${path}]: transition-all duration-200 ease-in-out transform hover:ml-[2rem] hover:bg-primary/0`,
+                      isActive ? "ml-[2rem]" : "ml-0"
+                    )}
                   >
-                    {label}
+                    <CardDescription
+                      className={clsx(
+                        `text-base transition-all duration-200 ease-in-out transform group-[${path}]-hover:ml-[2rem] group-[${path}]-hover:font-bold group-[${path}]-hover:text-primary group-[${path}]-hover:text-xl`,
+                        isActive ? "font-bold text-primary text-xl" : "ml-0"
+                      )}
+                    >
+                      {label}
+                    </CardDescription>
                   </Button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
