@@ -22,7 +22,6 @@ export default function ProjectCard({
   title,
   year,
   description,
-  link,
   image,
   skills,
 }: ProjectCardProps) {

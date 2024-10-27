@@ -2,7 +2,7 @@ import { Skill } from "../constants";
 
 import seanPortfolioV2Image from "@/public/sean-portfolio-v2.png";
 import seanPortfolioV1Image from "@/public/sean-portfolio-v1.png";
-import ninavanImage from "@/public/ninjaVan.png";
+import ninavanImage from "@/public/ninjavan.png";
 import apperizerImage from "@/public/appetizer.png";
 
 interface Project {

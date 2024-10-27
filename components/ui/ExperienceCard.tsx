@@ -25,7 +25,6 @@ export default function ExperienceCard({
   endYear,
   description,
   skills,
-  link,
 }: ExperienceCardProps) {
   return (
     <Card className="flex w-full border-none hover:bg-primary-foreground/40">
