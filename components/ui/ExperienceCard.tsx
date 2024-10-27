@@ -29,7 +29,7 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <Card className="flex w-full border-none hover:bg-primary-foreground/40">
-      <div>
+      <div className="hidden lg:block">
         <CardHeader>
           <CardDescription className="text-nowrap text-lg">
             {startYear} - {endYear}
@@ -37,13 +37,16 @@ export default function ExperienceCard({
         </CardHeader>
       </div>
 
-      <div>
+      <div className="w-full">
         <CardHeader>
           <CardTitle className="text-lg">{position}</CardTitle>
           <CardDescription>{company}</CardDescription>
+          <CardDescription className="text-nowrap lg:hidden">
+            {startYear} - {endYear}
+          </CardDescription>
         </CardHeader>
 
-        <CardContent>
+        <CardContent className="w-full">
           <CardDescription>{description}</CardDescription>
         </CardContent>
 

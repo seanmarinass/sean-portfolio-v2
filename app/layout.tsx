@@ -22,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${inter} dark antialiased flex py-[6rem] px-[10rem] h-full justify-center w-full`}
+        className={`${inter} dark antialiased flex md:flex-row flex-col p-[1rem] lg:py-[6rem] lg:px-[10rem] justify-center w-full gap-[2rem]`}
       >
-        <div className="flex flex-col w-[50%] max-w-[40rem] h-full relative">
-          <div className="flex flex-col gap-[4rem] fixed">
+        <div className="hidden lg:flex flex-col w-[20rem] h-full relative">
+          <div className="fixed flex flex-col gap-[4rem]">
             <IntroCard />
             <Navbar />
 
@@ -33,7 +33,10 @@ export default function RootLayout({
           </div>
         </div>
 
-        <div className="w-[50%] max-w-[40rem]">{children}</div>
+        <div className="block md:hidden">
+          <IntroCard />
+        </div>
+        <div className="md:w-[50%] min-h-screen">{children}</div>
       </body>
     </html>
   );

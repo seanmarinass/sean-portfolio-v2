@@ -17,7 +17,7 @@ export default function Navbar() {
   const handleMenuItemClick = useNavbarStore((state) => state.setActiveSection);
 
   return (
-    <nav>
+    <nav className="hidden md:block">
       <NavigationMenu orientation="vertical">
         <NavigationMenuList className="flex flex-col gap-[0.5rem]">
           {NAVBAR_LINKS.map((link, index) => {

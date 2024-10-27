@@ -19,7 +19,10 @@ export default function ProjectsSection() {
     if (inView) handleIsInView(NavbarPath.PROJECTS);
   }, [inView]);
   return (
-    <section ref={ref} className="flex flex-col gap-[2rem]">
+    <section
+      ref={ref}
+      className="flex flex-col gap-[2rem] justify-center items-start align-middle"
+    >
       <SectionTitle title="Projects" />
 
       {PROJECTS.map((project, index) => (
