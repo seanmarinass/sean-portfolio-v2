@@ -3,7 +3,7 @@ import SocialMediaRow from "@/components/ui/SocialMediaRow";
 
 export default function IntroCard() {
   return (
-    <section className="flex flex-col gap-[0.5rem] w-[75%] border-none">
+    <section className="flex flex-col gap-[0.5rem] w-full border-none">
       <CardTitle className="text-5xl font-bold">Sean Marinas</CardTitle>
       <CardTitle className="text-lg font-bold">
         Fullstack Software Engineer
