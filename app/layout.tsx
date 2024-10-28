@@ -36,6 +36,7 @@ export default function RootLayout({
         <div className="block lg:hidden">
           <IntroCard />
         </div>
+
         <div className="md:w-[50%] min-h-screen">{children}</div>
       </body>
     </html>

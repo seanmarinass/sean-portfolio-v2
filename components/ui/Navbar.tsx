@@ -11,13 +11,30 @@ import { useNavbarStore } from "@/stores/navbar.store";
 import clsx from "clsx";
 import { Button } from "./button";
 import { CardDescription } from "./card";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
+  const fadeInVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   const activeSection = useNavbarStore((state) => state.activeSection);
   const handleMenuItemClick = useNavbarStore((state) => state.setActiveSection);
 
   return (
-    <nav className="hidden md:block">
+    <motion.nav
+      className="hidden md:block"
+      initial="hidden"
+      animate="visible"
+      variants={fadeInVariants}
+    >
       <NavigationMenu orientation="vertical">
         <NavigationMenuList className="flex flex-col gap-[0.5rem]">
           {NAVBAR_LINKS.map((link, index) => {
@@ -50,6 +67,6 @@ export default function Navbar() {
           })}
         </NavigationMenuList>
       </NavigationMenu>
-    </nav>
+    </motion.nav>
   );
 }
